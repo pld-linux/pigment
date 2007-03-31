@@ -1,5 +1,5 @@
 Summary:	Animation frameworks for Elisa
-Summary(pl):	Framework animacji dla projektu Elisa
+Summary(pl.UTF-8):	Framework animacji dla projektu Elisa
 Name:		pigment
 Version:	0.1.4
 Release:	0.1
@@ -13,8 +13,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Rendering, animation and widget frameworks for Elisa.
 
-%description -l pl
-Framework renderowania animacji i widgetów dla projektu Elisa.
+%description -l pl.UTF-8
+Framework renderowania animacji i widgetÃ³w dla projektu Elisa.
 
 %prep
 %setup -q
