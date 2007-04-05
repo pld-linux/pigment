@@ -28,18 +28,24 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
+
 find $RPM_BUILD_ROOT%{py_sitescriptdir}/pgm -name "*.py" -exec rm {} \;
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
+%post	-p /sbin/ldconfig
+%postun	-p /sbin/ldconfig
+
 %files
 %defattr(644,root,root,755)
-%doc
+# module or library?
 %attr(755,root,root) %{_libdir}/*.so*
 %dir %{_libdir}/%{name}*
 %attr(755,root,root) %{_libdir}/%{name}*/libpgmrendergl1.so
 %dir %{_libdir}/%{name}*/gstreamer
 %attr(755,root,root) %{_libdir}/%{name}*/gstreamer/libpgmrendersink.so
 %attr(755,root,root) %{py_sitedir}/pgmrendermodule.so
-%{_pkgconfigdir}/%{name}-render-0.1.pc
 %{py_sitescriptdir}/pgm
+# -> devel?
+%{_pkgconfigdir}/%{name}-render-0.1.pc
