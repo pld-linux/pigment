@@ -1,12 +1,12 @@
 Summary:	Animation frameworks for Elisa
 Summary(pl.UTF-8):	Framework animacji dla projektu Elisa
 Name:		pigment
-Version:	0.1.4
+Version:	0.1.5
 Release:	0.1
 License:	GPL
 Group:		Applications
-Source0:	http://www.fluendo.com/elisa/downloads/pigment/%{name}-%{version}.tar.gz
-# Source0-md5:	3b04d2781d90dcd3bfcd860f819632b1
+Source0:	http://elisa.fluendo.com/static/download/pigment/%{name}-%{version}.tar.gz
+# Source0-md5:	d39000c031e35d5a5835343161ce4bf8
 URL:		http://www.fluendo.com/elisa/pigment.php
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
