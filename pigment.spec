@@ -1,12 +1,12 @@
 Summary:	Animation frameworks for Elisa
 Summary(pl.UTF-8):	Framework animacji dla projektu Elisa
 Name:		pigment
-Version:	0.1.5
+Version:	0.3.2
 Release:	0.1
 License:	GPL
 Group:		X11/Applications
 Source0:	http://elisa.fluendo.com/static/download/pigment/%{name}-%{version}.tar.gz
-# Source0-md5:	d39000c031e35d5a5835343161ce4bf8
+# Source0-md5:	c7c5cac44fba8610726eec8888264943
 URL:		http://www.fluendo.com/elisa/pigment.php
 BuildRequires:	OpenGL-GLX-devel
 BuildRequires:	cairo-devel >= 1.0.0
@@ -66,18 +66,18 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/libpgmrender-*.so.*.*.*
+%attr(755,root,root) %{_libdir}/libpigment-*.so.*.*.*
 %dir %{_libdir}/%{name}-*
-%attr(755,root,root) %{_libdir}/%{name}-*/libpgmrendergl1.so
+%attr(755,root,root) %{_libdir}/%{name}-*/*.so
 %dir %{_libdir}/%{name}-*/gstreamer
-%attr(755,root,root) %{_libdir}/%{name}-*/gstreamer/libpgmrendersink.so
-%attr(755,root,root) %{py_sitedir}/pgmrendermodule.so
+%attr(755,root,root) %{_libdir}/%{name}-*/gstreamer/libgstpgmimagesink.so
+%attr(755,root,root) %{py_sitedir}/_pgmmodule.so
 %{py_sitescriptdir}/pgm
 
 %files devel
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/libpgmrender-*.so
-%{_libdir}/libpgmrender-*.la
+%{_libdir}/*.la
 %{_includedir}/pigment-*
-%{_pkgconfigdir}/pigment-render-0.1.pc
-%{_gtkdocdir}/pigment-render
+%{_pkgconfigdir}/pigment-*.pc
+%{py_sitedir}/_pgmmodule.la
+%{_gtkdocdir}/pigment
