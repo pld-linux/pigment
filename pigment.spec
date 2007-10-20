@@ -56,7 +56,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %py_postclean
 rm -f $RPM_BUILD_ROOT%{_libdir}/pigment-*/{*.la,gstreamer/*.la}
-rm -f $RPM_BUILD_ROOT%{py_sitedir}/pgmrendermodule.la
+rm -f $RPM_BUILD_ROOT%{py_sitedir}/_pgmmodule.la
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -76,8 +76,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %files devel
 %defattr(644,root,root,755)
-%{_libdir}/*.la
+%attr(755,root,root) %{_libdir}/libpigment-*.so
+%{_libdir}/libpigment-*.la
 %{_includedir}/pigment-*
 %{_pkgconfigdir}/pigment-*.pc
-%{py_sitedir}/_pgmmodule.la
 %{_gtkdocdir}/pigment
