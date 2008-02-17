@@ -34,6 +34,10 @@ Summary:	Header files for pigment libraries
 Summary(pl.UTF-8):	Pliki nagłówkowe bibliotek pigment
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
+Requires:	glib2-devel >= 1:2.8.0
+Requires:	gtk+2-devel >= 2:2.12.0
+Requires:	gstreamer-devel >= 0.10.13
+Requires:	gstreamer-plugins-base-devel >= 0.10.0
 
 %description devel
 Header files for pigment libraries.
