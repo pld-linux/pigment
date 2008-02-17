@@ -1,12 +1,12 @@
 Summary:	Animation frameworks for Elisa
 Summary(pl.UTF-8):	Framework animacji dla projektu Elisa
 Name:		pigment
-Version:	0.3.2
+Version:	0.3.4
 Release:	0.1
 License:	GPL
 Group:		X11/Applications
 Source0:	http://elisa.fluendo.com/static/download/pigment/%{name}-%{version}.tar.gz
-# Source0-md5:	c7c5cac44fba8610726eec8888264943
+# Source0-md5:	612acbe8a6c8ca1a2a268c08d05d92e0
 URL:		http://www.fluendo.com/elisa/pigment.php
 BuildRequires:	OpenGL-GLX-devel
 BuildRequires:	cairo-devel >= 1.0.0
@@ -66,13 +66,10 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/libpigment-*.so.*.*.*
+%attr(755,root,root) %{_libdir}/libpigment-*.so*
 %dir %{_libdir}/%{name}-*
-%attr(755,root,root) %{_libdir}/%{name}-*/*.so
-%dir %{_libdir}/%{name}-*/gstreamer
-%attr(755,root,root) %{_libdir}/%{name}-*/gstreamer/libgstpgmimagesink.so
-%attr(755,root,root) %{py_sitedir}/_pgmmodule.so
-%{py_sitescriptdir}/pgm
+%dir %{_libdir}/%{name}-*/%{version}
+%dir %{_libdir}/%{name}-*/%{version}/*.so*
 
 %files devel
 %defattr(644,root,root,755)
