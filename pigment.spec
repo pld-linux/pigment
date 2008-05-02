@@ -1,12 +1,12 @@
 Summary:	Animation frameworks for Elisa
 Summary(pl.UTF-8):	Framework animacji dla projektu Elisa
 Name:		pigment
-Version:	0.3.4
+Version:	0.3.5
 Release:	0.1
 License:	LGPL v2+
 Group:		X11/Libraries
 Source0:	http://elisa.fluendo.com/static/download/pigment/%{name}-%{version}.tar.gz
-# Source0-md5:	612acbe8a6c8ca1a2a268c08d05d92e0
+# Source0-md5:	d63d4e59741af7aa6b5cf8e032643342
 URL:		http://www.fluendo.com/elisa/pigment.php
 BuildRequires:	OpenGL-GLX-devel
 BuildRequires:	cairo-devel >= 1.4.0
@@ -84,9 +84,9 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libpigment-0.3.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libpigment-0.3.so.3
+%attr(755,root,root) %ghost %{_libdir}/libpigment-0.3.so.4
 %attr(755,root,root) %{_libdir}/libpigment-gtk-0.3.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libpigment-gtk-0.3.so.3
+%attr(755,root,root) %ghost %{_libdir}/libpigment-gtk-0.3.so.4
 %dir %{_libdir}/pigment-0.3
 %dir %{_libdir}/pigment-0.3/%{version}
 %dir %{_libdir}/pigment-0.3/%{version}/*.so*
