@@ -7,7 +7,7 @@ License:	LGPL v2+
 Group:		X11/Libraries
 Source0:	http://elisa.fluendo.com/static/download/pigment/%{name}-%{version}.tar.bz2
 # Source0-md5:	ba850b6e6c3c9ed0d9bee910ad0bb1fb
-URL:		http://code.fluendo.com/pigment/trac
+URL:		https://code.fluendo.com/pigment/trac
 BuildRequires:	OpenGL-GLX-devel
 BuildRequires:	cairo-devel >= 1.4.0
 BuildRequires:	glib2-devel >= 1:2.8.0
