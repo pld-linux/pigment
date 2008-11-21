@@ -1,12 +1,12 @@
 Summary:	Animation frameworks for Elisa
 Summary(pl.UTF-8):	Framework animacji dla projektu Elisa
 Name:		pigment
-Version:	0.3.11
-Release:	2
+Version:	0.3.12
+Release:	1
 License:	LGPL v2+
 Group:		X11/Libraries
 Source0:	http://elisa.fluendo.com/static/download/pigment/%{name}-%{version}.tar.bz2
-# Source0-md5:	b5ee22ebab3be807049eeb2a290b7a89
+# Source0-md5:	3621dd5afd3c021c79ef85ac4a36f557
 URL:		https://code.fluendo.com/pigment/trac
 BuildRequires:	OpenGL-GLX-devel
 BuildRequires:	cairo-devel >= 1.4.0
