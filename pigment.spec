@@ -1,12 +1,12 @@
 Summary:	Animation frameworks for Elisa
 Summary(pl.UTF-8):	Framework animacji dla projektu Elisa
 Name:		pigment
-Version:	0.3.15
-Release:	2
+Version:	0.3.17
+Release:	1
 License:	LGPL v2+
 Group:		X11/Libraries
 Source0:	http://elisa.fluendo.com/static/download/pigment/%{name}-%{version}.tar.bz2
-# Source0-md5:	21171b424f440f77e0fd0162ee7aca18
+# Source0-md5:	b0947a18cc9265f3129ff4b069c1ed0c
 URL:		https://code.fluendo.com/pigment/trac
 BuildRequires:	OpenGL-GLX-devel
 BuildRequires:	cairo-devel >= 1.4.0
@@ -84,11 +84,11 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libpigment-0.3.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libpigment-0.3.so.9
+%attr(755,root,root) %ghost %{_libdir}/libpigment-0.3.so.11
 %attr(755,root,root) %{_libdir}/libpigment-gtk-0.3.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libpigment-gtk-0.3.so.9
+%attr(755,root,root) %ghost %{_libdir}/libpigment-gtk-0.3.so.11
 %attr(755,root,root) %{_libdir}/libpigment-imaging-0.3.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libpigment-imaging-0.3.so.9
+%attr(755,root,root) %ghost %{_libdir}/libpigment-imaging-0.3.so.11
 %dir %{_libdir}/pigment-0.3
 %dir %{_libdir}/pigment-0.3/%{version}
 %dir %{_libdir}/pigment-0.3/%{version}/*.so*
