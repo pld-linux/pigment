@@ -11,14 +11,12 @@ URL:		https://code.fluendo.com/pigment/trac
 BuildRequires:	OpenGL-GLX-devel
 BuildRequires:	cairo-devel >= 1.4.0
 BuildRequires:	glib2-devel >= 1:2.8.0
-BuildRequires:	gtk+2-devel >= 2:2.12.0
 BuildRequires:	gstreamer-devel >= 0.10.13
 BuildRequires:	gstreamer-plugins-base-devel >= 0.10.0
+BuildRequires:	gtk+2-devel >= 2:2.12.0
 BuildRequires:	pango-devel >= 1:1.16
-BuildRequires:	python-devel >= 1:2.4
-BuildRequires:	python-pygobject-devel >= 2.8.0
 BuildRequires:	pkgconfig
-BuildRequires:	rpm-pythonprov
+BuildRequires:	python-devel >= 1:2.4
 BuildRequires:	rpmbuild(macros) >= 1.98
 BuildRequires:	xorg-lib-libXrandr-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -35,9 +33,9 @@ Summary(pl.UTF-8):	Pliki nagłówkowe bibliotek pigment
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	glib2-devel >= 1:2.8.0
-Requires:	gtk+2-devel >= 2:2.12.0
 Requires:	gstreamer-devel >= 0.10.13
 Requires:	gstreamer-plugins-base-devel >= 0.10.0
+Requires:	gtk+2-devel >= 2:2.12.0
 
 %description devel
 Header files for pigment libraries.
