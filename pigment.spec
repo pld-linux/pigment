@@ -2,7 +2,7 @@ Summary:	Animation frameworks for Elisa
 Summary(pl.UTF-8):	Framework animacji dla projektu Elisa
 Name:		pigment
 Version:	0.3.17
-Release:	3
+Release:	4
 License:	LGPL v2+
 Group:		X11/Libraries
 Source0:	http://elisa.fluendo.com/static/download/pigment/%{name}-%{version}.tar.bz2
@@ -66,12 +66,13 @@ Statyczne biblioteki pigment.
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install \
+%{__make} -j1 install \
 	DESTDIR=$RPM_BUILD_ROOT
 
 %py_postclean
-rm -f $RPM_BUILD_ROOT%{_libdir}/pigment-0.3/%{version}/*.{la,a}
-rm -f $RPM_BUILD_ROOT%{py_sitedir}/_pgmmodule.la
+%{__rm} $RPM_BUILD_ROOT%{_libdir}/pigment-0.3/%{version}/*.{la,a}
+%{__rm} $RPM_BUILD_ROOT%{py_sitedir}/_pgmmodule.la
+%{__rm} $RPM_BUILD_ROOT%{_libdir}/*.la
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -96,9 +97,6 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/libpigment-0.3.so
 %attr(755,root,root) %{_libdir}/libpigment-gtk-0.3.so
 %attr(755,root,root) %{_libdir}/libpigment-imaging-0.3.so
-%{_libdir}/libpigment-0.3.la
-%{_libdir}/libpigment-gtk-0.3.la
-%{_libdir}/libpigment-imaging-0.3.la
 %{_includedir}/pigment-0.3
 %{_pkgconfigdir}/pigment-0.3.pc
 %{_pkgconfigdir}/pigment-gtk-0.3.pc
