@@ -2,7 +2,7 @@ Summary:	Animation frameworks for Elisa
 Summary(pl.UTF-8):	Framework animacji dla projektu Elisa
 Name:		pigment
 Version:	0.3.17
-Release:	4
+Release:	5
 License:	LGPL v2+
 Group:		X11/Libraries
 Source0:	http://elisa.fluendo.com/static/download/pigment/%{name}-%{version}.tar.bz2
@@ -71,7 +71,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %py_postclean
 %{__rm} $RPM_BUILD_ROOT%{_libdir}/pigment-0.3/%{version}/*.{la,a}
-%{__rm} $RPM_BUILD_ROOT%{py_sitedir}/_pgmmodule.la
 %{__rm} $RPM_BUILD_ROOT%{_libdir}/*.la
 
 %clean
